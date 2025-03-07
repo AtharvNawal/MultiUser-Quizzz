@@ -5,6 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Multi-User Quiz</title>
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- Firebase SDK -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js";
+        import { getFirestore } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-firestore.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-analytics.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyCq3zbJxgSw-tkb37LGWBEKKwbfM909Nb0",
+            authDomain: "multiuser-quizzz.firebaseapp.com",
+            projectId: "multiuser-quizzz",
+            storageBucket: "multiuser-quizzz.appspot.com",
+            messagingSenderId: "428669773909",
+            appId: "1:428669773909:web:585fa472d5b32ea2a78cdc",
+            measurementId: "G-GWT1R0MQZE"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+        getAnalytics(app);
+    </script>
 </head>
 <body>
     <div id="user-login" class="quiz-container">
@@ -23,9 +45,15 @@
             <div class="button-container">
                 <button class="restart-btn">Restart Quiz</button>
             </div>
+            <div class="leaderboard">
+                <h3>Leaderboard</h3>
+                <ul id="leaderboard-list"></ul>
+                <button id="clear-leaderboard-btn">Clear Leaderboard</button>
+            </div>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <!-- JavaScript File -->
+    <script type="module" src="script.js"></script>
 </body>
 </html>
