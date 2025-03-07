@@ -11,22 +11,58 @@ document.getElementById("start-quiz-btn").addEventListener("click", function () 
 });
 
 const quizData = [
-    { question: "What is encapsulation in Java?", options: ["Hiding data implementation", "Using multiple classes", "Writing functions", "None of the above"], answer: "Hiding data implementation" },
-            { question: "Which keyword is used to inherit a class in Java?", options: ["extends", "implements", "inherits", "super"], answer: "extends" },
-            { question: "What is polymorphism?", options: ["Having multiple methods with the same name but different behavior", "Writing only one function", "Overriding private variables", "None of the above"], answer: "Having multiple methods with the same name but different behavior" },
-            { question: "Which OOP concept allows defining a method in a superclass and overriding it in a subclass?", options: ["Encapsulation", "Inheritance", "Polymorphism", "Abstraction"], answer: "Polymorphism" },
-            { question: "What does the 'super' keyword do?", options: ["Refers to the parent class", "Creates a new instance", "Deletes an object", "None of the above"], answer: "Refers to the parent class" },
-            { question: "Which concept allows restricting access to certain parts of an object?", options: ["Encapsulation", "Abstraction", "Polymorphism", "Inheritance"], answer: "Encapsulation" },
-            { question: "Which keyword is used to define an interface in Java?", options: ["class", "interface", "implements", "extends"], answer: "interface" },
-            { question: "What is an abstract class?", options: ["A class that cannot be instantiated", "A class that must have a constructor", "A class that must have only abstract methods", "None of the above"], answer: "A class that cannot be instantiated" },
-            { question: "Which of the following allows multiple inheritance in Java?", options: ["Classes", "Interfaces", "Abstract classes", "Constructors"], answer: "Interfaces" },
-            { question: "What is the purpose of method overriding?", options: ["To change the behavior of a method in a subclass", "To create a new method", "To overload a constructor", "To make a class abstract"], answer: "To change the behavior of a method in a subclass" },
-            { question: "What is an object in Java?", options: ["An instance of a class", "A function", "A variable", "None of the above"], answer: "An instance of a class" },
-            { question: "What is the default access modifier in Java?", options: ["private", "public", "protected", "package-private"], answer: "package-private" },
-            { question: "What is the purpose of constructors in Java?", options: ["Initialize an object", "Destroy an object", "Define new variables", "None of the above"], answer: "Initialize an object" },
-            { question: "Which class in Java is the superclass of all classes?", options: ["Object", "Main", "Super", "Base"], answer: "Object" },
-            { question: "What is method overloading?", options: ["Defining multiple methods with the same name but different parameters", "Overriding a method in a subclass", "Creating a new class", "None of the above"], answer: "Defining multiple methods with the same name but different parameters" }
-        ];
+    { 
+        question: "Which sorting algorithm is best for nearly sorted data?", 
+        options: ["QuickSort", "MergeSort", "Timsort", "HeapSort"], 
+        answer: "Timsort" 
+    },
+    { 
+        question: "What data structure is used in Dijkstra’s algorithm?", 
+        options: ["Stack", "Queue", "Priority Queue", "Hash Table"], 
+        answer: "Priority Queue" 
+    },
+    { 
+        question: "Which algorithm finds the shortest path in an unweighted graph?", 
+        options: ["Dijkstra's Algorithm", "Bellman-Ford Algorithm", "Breadth-First Search", "Depth-First Search"], 
+        answer: "Breadth-First Search" 
+    },
+    { 
+        question: "Which technique is used to handle large datasets when sorting?", 
+        options: ["MergeSort", "External Sorting", "QuickSort", "Counting Sort"], 
+        answer: "External Sorting" 
+    },
+    { 
+        question: "What is the worst-case time complexity of QuickSort?", 
+        options: ["O(n log n)", "O(n^2)", "O(n)", "O(log n)"], 
+        answer: "O(n^2)" 
+    },
+    { 
+        question: "Which algorithm is best suited for finding the top K elements in a large dataset?", 
+        options: ["MergeSort", "HeapSort", "QuickSort", "Radix Sort"], 
+        answer: "HeapSort" 
+    },
+    { 
+        question: "Which hashing technique minimizes collisions?", 
+        options: ["Chaining", "Linear Probing", "Quadratic Probing", "Consistent Hashing"], 
+        answer: "Consistent Hashing" 
+    },
+    { 
+        question: "Which data structure is used to efficiently find the K-th largest element?", 
+        options: ["Binary Search Tree", "Min-Heap", "Max-Heap", "Hash Table"], 
+        answer: "Min-Heap" 
+    },
+    { 
+        question: "Which algorithm works best for uniformly distributed sorted data?", 
+        options: ["Binary Search", "Interpolation Search", "Exponential Search", "Linear Search"], 
+        answer: "Interpolation Search" 
+    },
+    { 
+        question: "Which quantum algorithm can factor large numbers efficiently?", 
+        options: ["Grover’s Algorithm", "Shor’s Algorithm", "Simon's Algorithm", "Deutsch-Jozsa Algorithm"], 
+        answer: "Shor’s Algorithm" 
+    }
+];
+
 
 let currentQuestion = 0;
 let score = 0;
