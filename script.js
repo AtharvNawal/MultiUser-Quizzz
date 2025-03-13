@@ -12,56 +12,106 @@ document.getElementById("start-quiz-btn").addEventListener("click", function () 
 
 const quizData = [
     { 
-        question: "Which sorting algorithm is best for nearly sorted data?", 
-        options: ["QuickSort", "MergeSort", "Timsort", "HeapSort"], 
-        answer: "Timsort" 
+        "question": "Which data structure is best suited for LRU cache implementation?", 
+        "options": ["Stack", "Queue", "Linked List", "HashMap with Doubly Linked List"], 
+        "answer": "HashMap with Doubly Linked List" 
     },
     { 
-        question: "What data structure is used in Dijkstra’s algorithm?", 
-        options: ["Stack", "Queue", "Priority Queue", "Hash Table"], 
-        answer: "Priority Queue" 
+        "question": "Which sorting algorithm is best for small datasets with mostly sorted elements?", 
+        "options": ["Insertion Sort", "MergeSort", "HeapSort", "QuickSort"], 
+        "answer": "Insertion Sort" 
     },
     { 
-        question: "Which algorithm finds the shortest path in an unweighted graph?", 
-        options: ["Dijkstra's Algorithm", "Bellman-Ford Algorithm", "Breadth-First Search", "Depth-First Search"], 
-        answer: "Breadth-First Search" 
+        "question": "Which algorithm is used for cycle detection in a graph?", 
+        "options": ["Dijkstra’s Algorithm", "Floyd’s Cycle Detection", "Bellman-Ford Algorithm", "Prim’s Algorithm"], 
+        "answer": "Floyd’s Cycle Detection" 
     },
     { 
-        question: "Which technique is used to handle large datasets when sorting?", 
-        options: ["MergeSort", "External Sorting", "QuickSort", "Counting Sort"], 
-        answer: "External Sorting" 
+        "question": "What is the best case time complexity of MergeSort?", 
+        "options": ["O(n^2)", "O(n log n)", "O(n)", "O(log n)"], 
+        "answer": "O(n log n)" 
     },
     { 
-        question: "What is the worst-case time complexity of QuickSort?", 
-        options: ["O(n log n)", "O(n^2)", "O(n)", "O(log n)"], 
-        answer: "O(n^2)" 
+        "question": "Which algorithm is best for finding the median of a stream of numbers?", 
+        "options": ["MergeSort", "Heap-based approach", "QuickSort", "Counting Sort"], 
+        "answer": "Heap-based approach" 
     },
     { 
-        question: "Which algorithm is best suited for finding the top K elements in a large dataset?", 
-        options: ["MergeSort", "HeapSort", "QuickSort", "Radix Sort"], 
-        answer: "HeapSort" 
+        "question": "Which data structure is best suited for implementing an undo feature?", 
+        "options": ["Queue", "Stack", "Heap", "Linked List"], 
+        "answer": "Stack" 
     },
     { 
-        question: "Which hashing technique minimizes collisions?", 
-        options: ["Chaining", "Linear Probing", "Quadratic Probing", "Consistent Hashing"], 
-        answer: "Consistent Hashing" 
+        "question": "Which algorithm finds the shortest path in a weighted graph with negative weights?", 
+        "options": ["Dijkstra’s Algorithm", "Bellman-Ford Algorithm", "Floyd-Warshall Algorithm", "Kruskal’s Algorithm"], 
+        "answer": "Bellman-Ford Algorithm" 
     },
     { 
-        question: "Which data structure is used to efficiently find the K-th largest element?", 
-        options: ["Binary Search Tree", "Min-Heap", "Max-Heap", "Hash Table"], 
-        answer: "Min-Heap" 
+        "question": "Which technique is used to efficiently store sparse matrices?", 
+        "options": ["2D Arrays", "Linked List", "Hash Table", "Compressed Sparse Row (CSR)"], 
+        "answer": "Compressed Sparse Row (CSR)" 
     },
     { 
-        question: "Which algorithm works best for uniformly distributed sorted data?", 
-        options: ["Binary Search", "Interpolation Search", "Exponential Search", "Linear Search"], 
-        answer: "Interpolation Search" 
+        "question": "Which searching algorithm is best for an infinite sorted list?", 
+        "options": ["Binary Search", "Exponential Search", "Interpolation Search", "Linear Search"], 
+        "answer": "Exponential Search" 
     },
     { 
-        question: "Which quantum algorithm can factor large numbers efficiently?", 
-        options: ["Grover’s Algorithm", "Shor’s Algorithm", "Simon's Algorithm", "Deutsch-Jozsa Algorithm"], 
-        answer: "Shor’s Algorithm" 
+        "question": "Which algorithm efficiently finds strongly connected components in a graph?", 
+        "options": ["Kruskal’s Algorithm", "Dijkstra’s Algorithm", "Kosaraju’s Algorithm", "Bellman-Ford Algorithm"], 
+        "answer": "Kosaraju’s Algorithm" 
+    },
+    { 
+        "question": "Which algorithm is best for detecting a cycle in an undirected graph?", 
+        "options": ["DFS with parent tracking", "BFS", "Dijkstra’s Algorithm", "Floyd’s Cycle Detection"], 
+        "answer": "DFS with parent tracking" 
+    },
+    { 
+        "question": "Which data structure is best for implementing a priority queue?", 
+        "options": ["Stack", "Queue", "Heap", "Hash Table"], 
+        "answer": "Heap" 
+    },
+    { 
+        "question": "Which algorithm efficiently finds the articulation points in a graph?", 
+        "options": ["Dijkstra’s Algorithm", "Tarjan’s Algorithm", "Floyd-Warshall Algorithm", "Kruskal’s Algorithm"], 
+        "answer": "Tarjan’s Algorithm" 
+    },
+    { 
+        "question": "Which algorithm is most efficient for finding the minimum spanning tree?", 
+        "options": ["Bellman-Ford Algorithm", "Dijkstra’s Algorithm", "Prim’s Algorithm", "Floyd-Warshall Algorithm"], 
+        "answer": "Prim’s Algorithm" 
+    },
+    { 
+        "question": "Which algorithm is best suited for counting the number of inversions in an array?", 
+        "options": ["MergeSort", "QuickSort", "HeapSort", "Radix Sort"], 
+        "answer": "MergeSort" 
+    },
+    { 
+        "question": "Which algorithm is most efficient for detecting bridges in a graph?", 
+        "options": ["Floyd-Warshall Algorithm", "Kosaraju’s Algorithm", "Tarjan’s Algorithm", "Bellman-Ford Algorithm"], 
+        "answer": "Tarjan’s Algorithm" 
+    },
+    { 
+        "question": "Which hashing technique provides the best performance for dynamic distributed systems?", 
+        "options": ["Chaining", "Linear Probing", "Consistent Hashing", "Quadratic Probing"], 
+        "answer": "Consistent Hashing" 
+    },
+    { 
+        "question": "Which searching algorithm is most efficient for a nearly sorted array?", 
+        "options": ["Binary Search", "Jump Search", "Exponential Search", "Ternary Search"], 
+        "answer": "Jump Search" 
+    },
+    { 
+        "question": "Which data structure is used in the implementation of a Trie?", 
+        "options": ["Hash Table", "Graph", "Linked List", "Tree"], 
+        "answer": "Tree" 
+    },
+    { 
+        "question": "Which algorithm efficiently finds the longest common subsequence (LCS)?", 
+        "options": ["Knuth-Morris-Pratt (KMP)", "Rabin-Karp", "Dynamic Programming", "Greedy Algorithm"], 
+        "answer": "Dynamic Programming" 
     }
-];
+]
 
 
 let currentQuestion = 0;
