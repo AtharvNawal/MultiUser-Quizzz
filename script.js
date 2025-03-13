@@ -12,62 +12,67 @@ document.getElementById("start-quiz-btn").addEventListener("click", function () 
 
 const quizData = [
     { 
-        "question": "Which data structure provides the most efficient implementation for an LRU cache?", 
+        "question": "Which data structure is best for efficiently handling LRU (Least Recently Used) cache operations?", 
         "options": ["Stack", "Queue", "Doubly Linked List with HashMap", "Self-Balancing BST"], 
         "answer": "Doubly Linked List with HashMap" 
     },
     { 
-        "question": "Which sorting algorithm is optimal for sorting a dataset containing multiple small sorted subarrays?", 
+        "question": "Which sorting algorithm is optimized for nearly sorted arrays?", 
         "options": ["MergeSort", "Timsort", "QuickSort", "HeapSort"], 
         "answer": "Timsort" 
     },
     { 
-        "question": "Which algorithm is most efficient for finding bridges in a graph?", 
-        "options": ["Kosaraju’s Algorithm", "Floyd-Warshall Algorithm", "Tarjan’s Algorithm", "Dijkstra’s Algorithm"], 
+        "question": "Which algorithm efficiently finds articulation points in a graph?", 
+        "options": ["Kruskal’s Algorithm", "Floyd-Warshall Algorithm", "Tarjan’s Algorithm", "Dijkstra’s Algorithm"], 
         "answer": "Tarjan’s Algorithm" 
     },
     { 
-        "question": "Which of the following algorithms provides the best expected runtime for the selection problem (finding the k-th smallest element)?", 
+        "question": "Which algorithm provides an expected linear time complexity for finding the k-th smallest element?", 
         "options": ["QuickSelect", "HeapSort", "MergeSort", "Binary Search"], 
         "answer": "QuickSelect" 
     },
     { 
-        "question": "Which graph algorithm is used in modern network routing protocols like OSPF?", 
+        "question": "Which graph algorithm is widely used in modern network routing protocols like OSPF?", 
         "options": ["Dijkstra’s Algorithm", "Kruskal’s Algorithm", "Floyd-Warshall Algorithm", "Bellman-Ford Algorithm"], 
         "answer": "Dijkstra’s Algorithm" 
     },
     { 
-        "question": "Which algorithm is most efficient for finding the longest palindromic substring in a given string?", 
+        "question": "Which algorithm efficiently finds the longest palindromic substring?", 
         "options": ["Manacher’s Algorithm", "KMP Algorithm", "Rabin-Karp Algorithm", "Z-Algorithm"], 
         "answer": "Manacher’s Algorithm" 
     },
     { 
-        "question": "Which type of tree is used in implementing dynamic segment trees?", 
-        "options": ["AVL Tree", "Fenwick Tree", "Binary Indexed Tree", "Persistent Segment Tree"], 
-        "answer": "Persistent Segment Tree" 
-    },
-    { 
-        "question": "Which data structure provides the most efficient solution for answering range minimum queries?", 
-        "options": ["Segment Tree", "Fenwick Tree", "Heap", "Hash Table"], 
+        "question": "Which data structure is used for efficiently storing and processing range queries?", 
+        "options": ["AVL Tree", "Fenwick Tree", "Segment Tree", "Trie"], 
         "answer": "Segment Tree" 
     },
     { 
-        "question": "Which data structure allows efficient substring search using preprocessing?", 
-        "options": ["Trie", "Suffix Tree", "Hash Table", "Fenwick Tree"], 
-        "answer": "Suffix Tree" 
+        "question": "Which algorithm efficiently finds strongly connected components in a directed graph?", 
+        "options": ["Dijkstra’s Algorithm", "Kosaraju’s Algorithm", "Kruskal’s Algorithm", "Bellman-Ford Algorithm"], 
+        "answer": "Kosaraju’s Algorithm" 
     },
     { 
-        "question": "Which hashing technique ensures a minimal number of collisions when distributing data across multiple servers?", 
-        "options": ["Linear Probing", "Quadratic Probing", "Chaining", "Consistent Hashing"], 
+        "question": "Which hashing technique minimizes collisions in distributed systems?", 
+        "options": ["Chaining", "Linear Probing", "Quadratic Probing", "Consistent Hashing"], 
         "answer": "Consistent Hashing" 
     },
     { 
-        "question": "Which OOP principle ensures that a derived class can modify the behavior of a base class method?", 
+        "question": "Which algorithm is used for finding the maximum flow in a network?", 
+        "options": ["Dijkstra’s Algorithm", "Bellman-Ford Algorithm", "Ford-Fulkerson Algorithm", "Kruskal’s Algorithm"], 
+        "answer": "Ford-Fulkerson Algorithm" 
+    },
+    { 
+        "question": "Which algorithm efficiently finds Eulerian paths in a graph?", 
+        "options": ["Floyd-Warshall Algorithm", "Kosaraju’s Algorithm", "Hierholzer’s Algorithm", "Prim’s Algorithm"], 
+        "answer": "Hierholzer’s Algorithm" 
+    },
+    { 
+        "question": "Which OOP principle allows dynamic method dispatch?", 
         "options": ["Encapsulation", "Polymorphism", "Abstraction", "Inheritance"], 
         "answer": "Polymorphism" 
     },
     { 
-        "question": "Which design pattern is used to ensure only one instance of a class exists?", 
+        "question": "Which design pattern ensures that only one instance of a class exists?", 
         "options": ["Factory Pattern", "Singleton Pattern", "Observer Pattern", "Prototype Pattern"], 
         "answer": "Singleton Pattern" 
     },
@@ -82,34 +87,54 @@ const quizData = [
         "answer": "final" 
     },
     { 
-        "question": "Which OOP concept is violated if a subclass has too many overridden methods?", 
+        "question": "Which OOP principle is violated if a subclass changes expected behavior of a base class method?", 
         "options": ["Encapsulation", "Inheritance", "Polymorphism", "Liskov Substitution Principle"], 
         "answer": "Liskov Substitution Principle" 
     },
     { 
-        "question": "Which type of constructor is called when an object is copied?", 
+        "question": "Which constructor is called when an object is copied?", 
         "options": ["Default Constructor", "Parameterized Constructor", "Copy Constructor", "Move Constructor"], 
         "answer": "Copy Constructor" 
     },
     { 
-        "question": "Which memory management technique is used in languages like Java to prevent memory leaks?", 
-        "options": ["Reference Counting", "Garbage Collection", "Stack Allocation", "Manual Deallocation"], 
-        "answer": "Garbage Collection" 
+        "question": "Which language feature in C++ ensures that a dynamically allocated object is properly deallocated?", 
+        "options": ["Garbage Collection", "Smart Pointers", "Manual Deallocation", "Stack Allocation"], 
+        "answer": "Smart Pointers" 
     },
     { 
-        "question": "Which OOP concept ensures that a class can only be instantiated through a specific function?", 
+        "question": "Which OOP concept allows restricting object instantiation to specific functions?", 
         "options": ["Factory Method Pattern", "Builder Pattern", "Adapter Pattern", "Decorator Pattern"], 
         "answer": "Factory Method Pattern" 
     },
     { 
-        "question": "Which of the following algorithms is best suited for detecting a deadlock in an operating system?", 
+        "question": "Which algorithm is used to detect a deadlock in an operating system?", 
         "options": ["Banker’s Algorithm", "Kruskal’s Algorithm", "Floyd-Warshall Algorithm", "Prim’s Algorithm"], 
         "answer": "Banker’s Algorithm" 
     },
     { 
-        "question": "Which of the following allows an object to be passed as an argument to a function that expects a different type?", 
+        "question": "Which of the following is most efficient for solving the subset sum problem?", 
+        "options": ["Greedy Algorithm", "Branch and Bound", "Dynamic Programming", "Brute Force"], 
+        "answer": "Dynamic Programming" 
+    },
+    { 
+        "question": "Which memory allocation strategy is used in garbage-collected languages like Java?", 
+        "options": ["Reference Counting", "Mark and Sweep", "Stack Allocation", "Manual Memory Management"], 
+        "answer": "Mark and Sweep" 
+    },
+    { 
+        "question": "Which of the following algorithms is best suited for fast modular exponentiation?", 
+        "options": ["Naive Multiplication", "Exponentiation by Squaring", "Floyd’s Algorithm", "Kruskal’s Algorithm"], 
+        "answer": "Exponentiation by Squaring" 
+    },
+    { 
+        "question": "Which OOP concept allows an object to be passed as an argument to a function that expects a different type?", 
         "options": ["Method Overloading", "Method Overriding", "Operator Overloading", "Type Conversion"], 
         "answer": "Type Conversion" 
+    },
+    { 
+        "question": "Which algorithm is most efficient for detecting cycles in a directed graph?", 
+        "options": ["BFS", "DFS with Back Edge Detection", "Dijkstra’s Algorithm", "Kruskal’s Algorithm"], 
+        "answer": "DFS with Back Edge Detection" 
     }
 ]
 
